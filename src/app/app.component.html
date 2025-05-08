@@ -140,9 +140,6 @@
                         <mat-error *ngIf="f['currentAddress'].get('pincode')?.hasError('required')">
                           Pincode is a required field.
                         </mat-error>
-                        <mat-error *ngIf="f['currentAddress'].get('pincode')?.hasError('pattern')">
-                          Pincode contain only numbers.
-                        </mat-error>
                       </mat-form-field>
                     </div>
                   </div>
@@ -203,9 +200,6 @@
                          <mat-error *ngIf="f['permanentAddress'].get('pincode')?.hasError('required')">
                            Pincode is a required field.
                          </mat-error>
-                         <mat-error *ngIf="f['permanentAddress'].get('pincode')?.hasError('pattern')">
-                          Pincode contain only numbers.
-                        </mat-error>
                        </mat-form-field>
                      </div>
                    </div>

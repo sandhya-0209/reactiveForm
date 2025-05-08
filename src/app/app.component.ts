@@ -62,13 +62,13 @@ export class AppComponent implements OnInit{
         country : new FormControl("India",[Validators.required]),
         state : new FormControl(null,[Validators.required,Validators.pattern(CustomRegex.onlyText)]),
         city : new FormControl(null,[Validators.required,Validators.pattern(CustomRegex.onlyText)]),
-        pincode : new FormControl(null,[Validators.required,Validators.pattern(CustomRegex.onlyNumber)])
+        pincode : new FormControl(null,[Validators.required])
       }),
     permanentAddress : new FormGroup({
         country : new FormControl(null,[Validators.required,Validators.pattern(CustomRegex.onlyText)]),
         state : new FormControl(null,[Validators.required,Validators.pattern(CustomRegex.onlyText)]),
         city : new FormControl(null,[Validators.required,Validators.pattern(CustomRegex.onlyText)]),
-        pincode : new FormControl(null,[Validators.required,Validators.pattern(CustomRegex.onlyNumber)])
+        pincode : new FormControl(null,[Validators.required])
       }),
       isAddSame : new FormControl({value:false ,disabled:true},[Validators.required]),
       skills : new FormArray([],[Validators.required]),
