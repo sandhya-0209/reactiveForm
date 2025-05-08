@@ -14,7 +14,7 @@ export class AppComponent implements OnInit{
   signUpForm !: FormGroup;
   title = 'reactiveForm';
   countriesArr : Array<any> = COUNTRIES_META_DATA;
-  newFormControl = new FormControl('',[Validators.required])
+  newFormControl = new FormControl('',[Validators.required]);
 
   ngOnInit(): void {
     this.createSignUpForm();
@@ -62,13 +62,13 @@ export class AppComponent implements OnInit{
         country : new FormControl("India",[Validators.required]),
         state : new FormControl(null,[Validators.required,Validators.pattern(CustomRegex.onlyText)]),
         city : new FormControl(null,[Validators.required,Validators.pattern(CustomRegex.onlyText)]),
-        pincode : new FormControl(null,[Validators.required])
+        pincode : new FormControl(null,[Validators.required,Validators.pattern(CustomRegex.onlyNumber)])
       }),
     permanentAddress : new FormGroup({
         country : new FormControl(null,[Validators.required,Validators.pattern(CustomRegex.onlyText)]),
         state : new FormControl(null,[Validators.required,Validators.pattern(CustomRegex.onlyText)]),
         city : new FormControl(null,[Validators.required,Validators.pattern(CustomRegex.onlyText)]),
-        pincode : new FormControl(null,[Validators.required])
+        pincode : new FormControl(null,[Validators.required,Validators.pattern(CustomRegex.onlyNumber)])
       }),
       isAddSame : new FormControl({value:false ,disabled:true},[Validators.required]),
       skills : new FormArray([],[Validators.required]),
